@@ -6,16 +6,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veterinaria Dos Patitas</title>
-    <link rel="stylesheet" href="{% static 'css/estilosInicio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilosInicio.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/estilosNav.css' %}"> 
 </head>
 <body>
+
     <header>
         <nav class="navbar">
-
             <div class="logo">
                 <h1>Veterinaria Dos Patitas</h1>
             </div>
-
             <ul class="nav-links">
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
@@ -24,14 +24,96 @@
             </ul>
 
             <a href="{% url 'agendar' %}" class="btn-nav">Agenda tu cita</a>
-
         </nav>
     </header>
-    <main></main>
-    <aside></aside>
-    <footer></footer>
 
-    <h1>Bienvenido a la Veterinaria</h1>
-    <h2>...</h2>
+    <main>
+
+        <div class="hero">
+            <div class="hero-text animar">
+                <h1>Cuidamos lo que más amas</h1>
+                <p>Sabemos lo mucho que significa tu mascota para ti. Por eso, en Veterinaria Dos Patitas brindamos atención profesional, cálida y personalizada para que tu compañero siempre esté sano y feliz.</p>
+            </div>
+            <div class="hero-image animar">
+                <img src="{% static 'img/inicio.jpeg' %}" alt="Perritos">
+            </div>
+        </div>
+
+        <div class="banner animar">
+            <div class="banner-text">
+                <h2>Reimaginamos el cuidado de tu mascota.</h2>
+                <p>Un servicio personalizado a las necesidades de cada mascota. Conformados por una comunidad de humanos, animales y veterinarios extraordinarios, con los mejores estándares de calidad para disfrutar de mascotas sanas y felices.</p>
+            </div>
+            <a href="agendarCita.html" class="btn-banner">Agenda tu cita</a>
+        </div>
+
+    </main>
+
+    <aside>
+        <div class="razones">
+            <h2 class="animar">¿Por qué elegirnos?</h2>
+            <p class="razones-subtitulo animar">Nos dedicamos a brindar el mejor cuidado para tu mascota con compromiso y profesionalismo.</p>
+
+            <div class="razones-grid">
+                <div class="razon-card animar">
+                    <div class="razon-icono">🩺</div>
+                    <h3>Veterinarios certificados</h3>
+                    <p>Nuestro equipo cuenta con formación profesional y experiencia para atender a tu mascota con la más alta calidad médica.</p>
+                </div>
+                <div class="razon-card animar">
+                    <div class="razon-icono">❤️</div>
+                    <h3>Atención personalizada</h3>
+                    <p>Cada mascota es única. Por eso adaptamos cada consulta y tratamiento a las necesidades específicas de tu compañero.</p>
+                </div>
+                <div class="razon-card animar">
+                    <div class="razon-icono">💰</div>
+                    <h3>Precios accesibles</h3>
+                    <p>Creemos que todos merecen acceso a una buena atención veterinaria. Ofrecemos tarifas justas sin sacrificar la calidad.</p>
+                </div>
+                <div class="razon-card animar">
+                    <div class="razon-icono">🏠</div>
+                    <h3>Ambiente seguro y cómodo</h3>
+                    <p>Nuestras instalaciones están diseñadas para que tu mascota se sienta tranquila y en confianza durante su visita.</p>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <footer>
+        <div class="footer-contenido">
+
+            <div class="footer-col animar">
+                <h3>Veterinaria Dos Patitas</h3>
+                <p>Cuidamos a tu mascota con amor, profesionalismo <br> y dedicación. Tu confianza es nuestra mayor responsabilidad.</p>
+            </div>
+
+            <div class="footer-col animar">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📞 81 1234 5678</li>
+                    <li>✉️ contacto@dospatitas.com</li>
+                    <li>📍 Monterrey, Nuevo León</li>
+                    <li>🕐 Lun - Sáb: 9:00am - 8:00pm</li>
+                </ul>
+            </div>
+
+            <div class="footer-col animar">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#">📘 Facebook</a></li>
+                    <li><a href="#">📸 Instagram</a></li>
+                    <li><a href="#">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Veterinaria Dos Patitas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'scroll.js' %}"></script>
+
 </body>
 </html>

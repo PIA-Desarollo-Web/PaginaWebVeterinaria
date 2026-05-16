@@ -67,8 +67,25 @@ button{
     border-radius: 30px;
     transition: 0.3s;
     color: aliceblue;
+    box-shadow: black;
 }
+
+
 
 button:hover{
     background-color: #74378e;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px #875f999f;
+}
+
+/*ANIMAR*/
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
