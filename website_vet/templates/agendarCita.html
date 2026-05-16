@@ -4,61 +4,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agendar Cita - Veterinaria Dos Patitas</title>
+    <title>Veterinaria Dos Patitas-Agendar Cita</title>
     <link rel="stylesheet" href="{% static 'css/estilosAgendar.css' %}">
-    <link rel="stylesheet" href="{% static 'css/estilosNav.css' %}">   
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">   
 </head>
 <body>
 
     <header>
-        <nav class="navbar">
+        <nav class="navBar">
             <div class="logo">
                 <h1>Veterinaria Dos Patitas</h1>
             </div>
-            <ul class="nav-links">
+            <ul class="links">
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
                 <li><a href="{% url 'servicios' %}">Servicios</a></li>
                 <li><a href="{% url 'sucursales' %}">Sucursales</a></li>
             </ul>
-            <a href="{% url 'agendar' %}" class="btn-nav">Agenda tu cita</a>
+            <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
         </nav>
     </header>
 
     <main>
-        <div class="agendar-container">
+        <div class="agendar">
 
             <h2 class="animar">¡Agenda tu cita con nosotros!</h2>
 
-            <form action="" class="form-cita">
+            <form action="formCita" class="formCita">
 
-                <div class="form-seccion animar">
+                <div class="dueño animar">
                     <h3>Datos del dueño</h3>
-                    <div class="form-grupo">
+                    <div class="formDueño">
                         <label for="nombre">Nombre completo:</label>
-                        <input type="text" name="nombre" id="nombre" placeholder="Ej. Juan Pérez">
+                        <input type="text" name="nombre" id="nombre">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formDueño">
                         <label for="telefono">Teléfono:</label>
-                        <input type="text" name="telefono" id="telefono" placeholder="Ej. 81 1234 5678">
+                        <input type="text" name="telefono" id="telefono">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formDueño">
                         <label for="correo">Correo electrónico:</label>
-                        <input type="email" name="correo" id="correo" placeholder="Ej. correo@email.com">
+                        <input type="email" name="correo" id="correo">
                     </div>
                 </div>
 
-                <div class="form-seccion animar">
+                <div class="mascota animar">
                     <h3>Datos de la mascota</h3>
-                    <div class="form-grupo">
+                    <div class="formMascota">
                         <label for="mascota">Nombre de la mascota:</label>
-                        <input type="text" name="mascota" id="mascota" placeholder="Ej. Firulais">
+                        <input type="text" name="mascota" id="mascota">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formMascota">
                         <label for="edad">Edad:</label>
-                        <input type="text" name="edad" id="edad" placeholder="Ej. 3 años">
+                        <input type="text" name="edad" id="edad">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formMascota">
                         <label for="especie">Especie:</label>
                         <select name="especie" id="especie">
                             <option value="perro">Perro</option>
@@ -67,16 +67,16 @@
                     </div>
                 </div>
 
-                <div class="form-seccion animar">
+                <div class="cita animar">
                     <h3>Datos de la cita</h3>
-                    <div class="form-grupo">
+                    <div class="formCita">
                         <label for="sucursal">Sucursal:</label>
                         <select name="sucursal" id="sucursal">
                             <option value="enramada">Enramada</option>
                             <option value="sanFernando">San Fernando</option>
                         </select>
                     </div>
-                    <div class="form-grupo">
+                    <div class="formCita">
                         <label for="servicio">Servicio:</label>
                         <select name="servicio" id="servicio">
                             <option value="limpieza">Limpieza dental</option>
@@ -88,22 +88,22 @@
                             <option value="general">Consulta general</option>
                         </select>
                     </div>
-                    <div class="form-grupo">
+                    <div class="formCita">
                         <label for="fecha">Fecha:</label>
                         <input type="date" name="fecha" id="fecha">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formCita">
                         <label for="hora">Hora:</label>
                         <input type="time" name="hora" id="hora">
                     </div>
-                    <div class="form-grupo">
+                    <div class="formCita">
                         <label for="nota">Especificaciones:</label>
-                        <input type="text" name="nota" id="nota" placeholder="Alguna nota adicional...">
+                        <input type="text" name="nota" id="nota" >
                     </div>
                 </div>
 
                 <div class="animar">
-                    <button type="submit" class="btn-confirmar">Confirmar cita</button>
+                    <button type="submit" class="botonConfirmar">Confirmar cita</button>
                 </div>
 
             </form>
@@ -111,7 +111,39 @@
     </main>
 
     <aside></aside>
-    <footer></footer>
+    <footer>
+        <div class="footerCont">
+
+            <div class="footerVet animar">
+                <h3>Veterinaria Dos Patitas</h3>
+                <p>Cuidamos a tu mascota con amor, profesionalismo <br> y dedicación. Tu confianza es nuestra mayor responsabilidad.</p>
+            </div>
+
+            <div class="footerVet animar">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📞 81 1234 5678</li>
+                    <li>✉️ contacto@dospatitas.com</li>
+                    <li>📍 Monterrey, Nuevo León</li>
+                    <li>🕐 Lun - Sáb: 9:00am - 8:00pm</li>
+                </ul>
+            </div>
+
+            <div class="footerVet animar">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#">📘 Facebook</a></li>
+                    <li><a href="#">📸 Instagram</a></li>
+                    <li><a href="#">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footerFondo">
+            <p>© 2025 Veterinaria Dos Patitas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
     <script src="{% static 'scroll.js' %}"></script>
 

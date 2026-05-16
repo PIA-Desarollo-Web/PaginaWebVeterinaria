@@ -5,26 +5,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Veterinaria Dos Patitas-Nosotros</title>
     <link rel="stylesheet" href="{% static 'css/estilosNosotros.css' %}"> 
-    <link rel="stylesheet" href="{% static 'css/estilosNav.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}"> 
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navBar">
 
             <div class="logo">
                 <h1>Veterinaria Dos Patitas</h1>
             </div>
 
-            <ul class="nav-links">
+            <ul class="links">
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
                 <li><a href="{% url 'servicios' %}">Servicios</a></li>
                 <li><a href="{% url 'sucursales' %}">Sucursales</a></li>
             </ul>
 
-            <a href="{% url 'agendar' %}" class="btn-nav">Agenda tu cita</a>
+            <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
 
         </nav>
     </header>

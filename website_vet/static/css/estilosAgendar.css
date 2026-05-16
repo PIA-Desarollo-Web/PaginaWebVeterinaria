@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
 }
 
 h2 {
@@ -11,19 +12,20 @@ h2 {
     font-size: 40px;
     margin-bottom: 30px;
     margin-top: 30px;
-    color: rgb(22, 9, 39);
+    color: #4f1f64;
 
 }
 
-h3 {
-    color: #654679;
+.formCita h3 {
+    color: #4f1f64;
     margin-bottom: 20px;
     margin-top: 20px;
     text-align: center;
+    font-size: 35px;
 }
 
 form {
-    background: #b5aabd ;
+    background: #b8a2c7 ;
     border-radius: 12px;
     padding: 30px;
     width: 800px;
@@ -31,7 +33,7 @@ form {
 
 }
 
-div {
+.formCita div {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -44,9 +46,9 @@ label {
 input, select {
     padding: 12px 14px;
     border-radius: 8px;
-    background: #c3bdc7;
+    background: #a08aaf;
     color: rgb(42, 14, 67);
-    border: #654679;
+    border: #a08aaf;
     outline: #3e2c49;
 }
 
@@ -61,16 +63,17 @@ input, select {
 
 button{
     background-color: #875f99;
-    border-color:#875f99 ;
+    border:#a08aaf ;
     color: white;
+    font-weight: bold;
+    font-size: 20px;
     padding: 12px 22px;
     border-radius: 30px;
     transition: 0.3s;
     color: aliceblue;
     box-shadow: black;
+
 }
-
-
 
 button:hover{
     background-color: #74378e;
@@ -78,7 +81,6 @@ button:hover{
     box-shadow: 0 12px 30px #875f999f;
 }
 
-/*ANIMAR*/
 .animar {
     opacity: 0;
     transform: translateY(40px);
@@ -88,4 +90,10 @@ button:hover{
 .animar.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+aside {
+    width: 100%;
+    background-color: white;
+    padding: 10px 10px;
 }
