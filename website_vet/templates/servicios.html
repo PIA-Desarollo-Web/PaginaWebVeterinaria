@@ -5,31 +5,149 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veterinaria Dos Patitas-Servicios</title>
+    <title>Veterinaria Dos Patitas - Servicios</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
     <link rel="stylesheet" href="{% static 'css/estilosServicios.css' %}">
-    <link rel="stylesheet" href="{% static 'css/estilos.css' %}"> 
 </head>
 <body>
     <header>
         <nav class="navBar">
-
             <div class="logo">
                 <h1>Veterinaria Dos Patitas</h1>
             </div>
-
             <ul class="links">
                 <li><a href="{% url 'inicio' %}">Inicio</a></li>
                 <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
                 <li><a href="{% url 'servicios' %}">Servicios</a></li>
                 <li><a href="{% url 'sucursales' %}">Sucursales</a></li>
             </ul>
-
             <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
-
         </nav>
     </header>
-    <main></main>
+
+    <main>
+
+        <div class="servicios-header animar">
+            <h2>Nuestros Servicios</h2>
+            <p>Ofrecemos atención integral para tu mascota con los más altos estándares de calidad médica y bienestar animal.</p>
+        </div>
+
+        <div class="serviciosGrid">
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/limpiezaDental.jpg' %}" alt="Limpieza dental" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $750</span>
+                    <h3>Limpieza dental</h3>
+                    <p>Eliminación de sarro y limpieza bucal básica.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/bañoyCorte.jpg' %}" alt="Baño y corte" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $350</span>
+                    <h3>Baño y corte de pelo</h3>
+                    <p>Corte de pelo, baño y limpieza general.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/consultaOrto.jpg' %}" alt="Consulta ortopédica" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $600</span>
+                    <h3>Consulta ortopédica</h3>
+                    <p>Revisión de huesos, articulaciones y problemas de movilidad.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/consultaCardio.jpg' %}" alt="Consulta cardiológica" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $500</span>
+                    <h3>Consulta cardiológica</h3>
+                    <p>Evaluación especializada del corazón realizada por el veterinario cardiólogo.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/desparacitacion.jpg' %}" alt="Desparasitación" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $150</span>
+                    <h3>Desparacitación</h3>
+                    <p>Tratamiento para eliminar parásitos internos y externos.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/vacunacion.jpg' %}" alt="Vacunación" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $200</span>
+                    <h3>Vacunación</h3>
+                    <p>Aplicación de vacunas para prevenir enfermedades</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/consultaGeneral.jpg' %}" alt="Consulta general" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $350</span>
+                    <h3>Consulta general</h3>
+                    <p>Revisión completa para evaluar la salud de la mascota y detectar posibles enfermedades.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+            <div class="servicioCard animar">
+                <img src="{% static 'img/corteUñas.jpg' %}" alt="Corte de uñas" class="cardImg">
+                <div class="cardInfo">
+                    <span class="cardPrecio">Desde $80</span>
+                    <h3>Corte de uñas</h3>
+                    <p>Servicio rápido y seguro para mantener las uñas de tu mascota en la longitud adecuada y sin riesgos.</p>
+                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
     <aside></aside>
-    <footer></footer>
+
+    <footer>
+        <div class="footerCont">
+            <div class="footerVet animar">
+                <h3>Veterinaria Dos Patitas</h3>
+                <p>Cuidamos a tu mascota con amor, profesionalismo <br> y dedicación. Tu confianza es nuestra mayor responsabilidad.</p>
+            </div>
+            <div class="footerVet animar">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>📞 81 1234 5678</li>
+                    <li>✉️ contacto@dospatitas.com</li>
+                    <li>📍 Monterrey, Nuevo León</li>
+                    <li>🕐 Lun - Sáb: 9:00am - 8:00pm</li>
+                </ul>
+            </div>
+            <div class="footerVet animar">
+                <h4>Síguenos</h4>
+                <ul>
+                    <li><a href="#">📘 Facebook</a></li>
+                    <li><a href="#">📸 Instagram</a></li>
+                    <li><a href="#">💬 WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footerFondo">
+            <p>© 2025 Veterinaria Dos Patitas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'scroll.js' %}"></script>
 </body>
 </html>

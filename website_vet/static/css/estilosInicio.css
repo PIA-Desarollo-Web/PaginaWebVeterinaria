@@ -1,10 +1,11 @@
- .inicio {
+ /* ── HERO ── */
+.inicio {
     display: flex;
     flex-direction: row;
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - 85px);
 }
- 
+
 .inicioTexto {
     width: 50%;
     height: 100%;
@@ -13,27 +14,28 @@
     justify-content: center;
     padding: 0 70px 0 80px;
 }
- 
+
 .inicioTexto h1 {
     font-size: 55px;
     color: #4f1f64;
     line-height: 1.15;
     margin-bottom: 24px;
 }
- 
+
 .inicioTexto p {
     font-size: 18px;
     color: #555;
     line-height: 1.7;
 }
- 
+
 .inicioImg {
     width: 50%;
     height: 100%;
     overflow: hidden;
     background-color: #c9b8d8;
+    border-radius: 30px 0 0 0;
 }
- 
+
 .inicioImg img {
     width: 100%;
     height: 100%;
@@ -42,21 +44,21 @@
     display: block;
 }
 
+/* ── BANNER ── */
 .banner {
     width: 100%;
     background-color: #46105e;
-    margin-top: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 70px 100px;
     gap: 40px;
 }
- 
+
 .bannerTexto {
     max-width: 650px;
 }
- 
+
 .bannerTexto h2 {
     font-size: 42px;
     color: white;
@@ -64,40 +66,48 @@
     margin-bottom: 20px;
     font-weight: bold;
 }
- 
+
 .bannerTexto p {
     font-size: 16px;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
 }
- 
+
 .botonBanner {
     text-decoration: none;
     background-color: white;
     color: #4f1f64;
-    padding: 18px 40px;   
+    padding: 18px 40px;
     border-radius: 40px;
     font-weight: bold;
-    font-size: 18px;       
+    font-size: 18px;
+    white-space: nowrap;
     transition: 0.3s;
 }
- 
+
 .botonBanner:hover {
     background-color: #f0edfa;
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgb(0, 0, 0);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
- 
+
+/* ── ASIDE: POR QUÉ ELEGIRNOS ── */
+aside {
+    width: 100%;
+    background-color: white;
+    padding: 80px 100px;
+}
+
 .razones {
     text-align: center;
 }
- 
+
 .razones h2 {
     font-size: 42px;
     color: #4f1f64;
     margin-bottom: 16px;
 }
- 
+
 .razonesSub {
     font-size: 17px;
     color: #777;
@@ -106,55 +116,60 @@
     margin-left: auto;
     margin-right: auto;
 }
- 
+
 .razonesGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
 }
- 
+
 .razonVet {
     background-color: #f0edfa;
     border-radius: 20px;
     padding: 36px 24px;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.6s;
 }
- 
-.razonVet:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.12);
-}
- 
-.razonVet h3 {
-    font-size: 18px;
-    color: #4f1f64;
-    margin-bottom: 12px;
-}
- 
-.razonVet p {
-    font-size: 14px;
-    color: #666;
-    line-height: 1.7;
-}
+
+
 
 .razonIcono {
     font-size: 44px;
     margin-bottom: 18px;
 }
 
+.razonVet h3 {
+    font-size: 18px;
+    color: #4f1f64;
+    margin-bottom: 12px;
+}
+
+.razonVet p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* ── ANIMACIÓN ── */
 .animar {
     opacity: 0;
     transform: translateY(40px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
- 
+
 .animar.visible {
     opacity: 1;
     transform: translateY(0);
 }
-aside {
-    width: 100%;
-    background-color: white;
-    padding: 80px 100px;
+
+.razonVet.animar.visible:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.12);
+}
+
+.botonBanner:hover {
+    background-color: #f0edfa;
+    transform: translateY(-15px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.2);
 }
