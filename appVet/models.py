@@ -10,7 +10,7 @@ class Doctor(models.Model):
 
 class Servicio(models.Model):
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=100)
     precio = models.FloatField()
 
     def __str__(self):
@@ -18,7 +18,7 @@ class Servicio(models.Model):
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=50)
-    descripcion = models.CharField(max_length=50)
+    descripcion = models.CharField(max_length=100)
     precio = models.FloatField()
     
     def __str__(self):
