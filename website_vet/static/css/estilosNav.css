@@ -48,17 +48,12 @@
 }
 
 .btn-nav{
-    text-decoration: none;
-
     background-color: #875f99;
+    border-color:#875f99 ;
     color: white;
-
     padding: 12px 22px;
-
     border-radius: 30px;
-
     transition: 0.3s;
-
     color: aliceblue;
 }
 
