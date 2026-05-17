@@ -27,7 +27,8 @@
 
     <main>
 
-        <div class="servicios-header animar">
+        <!-- SERVICIOS -->
+        <div class="serviciosInicio animar">
             <h2>Nuestros Servicios</h2>
             <p>Ofrecemos atención integral para tu mascota con los más altos estándares de calidad médica y bienestar animal.</p>
         </div>
@@ -37,40 +38,40 @@
             <div class="servicioCard animar">
                 <img src="{% static 'img/limpiezaDental.jpg' %}" alt="Limpieza dental" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $750</span>
+                    <span class="cardPrecio">Desde $350</span>
                     <h3>Limpieza dental</h3>
-                    <p>Eliminación de sarro y limpieza bucal básica.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <p>Eliminamos el sarro y la placa bacteriana para mantener la salud bucal de tu mascota en óptimas condiciones.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
             <div class="servicioCard animar">
                 <img src="{% static 'img/bañoyCorte.jpg' %}" alt="Baño y corte" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $350</span>
-                    <h3>Baño y corte de pelo</h3>
-                    <p>Corte de pelo, baño y limpieza general.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <span class="cardPrecio">Desde $200</span>
+                    <h3>Baño y corte</h3>
+                    <p>Servicio de estética completo con baño, secado, corte de pelo y uñas para que tu mascota luzca increíble.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
             <div class="servicioCard animar">
                 <img src="{% static 'img/consultaOrto.jpg' %}" alt="Consulta ortopédica" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $600</span>
+                    <span class="cardPrecio">Desde $500</span>
                     <h3>Consulta ortopédica</h3>
-                    <p>Revisión de huesos, articulaciones y problemas de movilidad.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <p>Diagnóstico y tratamiento de problemas óseos y articulares para mejorar la movilidad de tu mascota.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
             <div class="servicioCard animar">
                 <img src="{% static 'img/consultaCardio.jpg' %}" alt="Consulta cardiológica" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $500</span>
+                    <span class="cardPrecio">Desde $600</span>
                     <h3>Consulta cardiológica</h3>
-                    <p>Evaluación especializada del corazón realizada por el veterinario cardiólogo.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <p>Evaluación del sistema cardiovascular con equipos especializados para detectar enfermedades del corazón.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
@@ -78,29 +79,29 @@
                 <img src="{% static 'img/desparacitacion.jpg' %}" alt="Desparasitación" class="cardImg">
                 <div class="cardInfo">
                     <span class="cardPrecio">Desde $150</span>
-                    <h3>Desparacitación</h3>
-                    <p>Tratamiento para eliminar parásitos internos y externos.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <h3>Desparasitación</h3>
+                    <p>Tratamiento preventivo contra parásitos internos y externos para mantener a tu mascota sana y protegida.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
             <div class="servicioCard animar">
                 <img src="{% static 'img/vacunacion.jpg' %}" alt="Vacunación" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $200</span>
+                    <span class="cardPrecio">Desde $180</span>
                     <h3>Vacunación</h3>
-                    <p>Aplicación de vacunas para prevenir enfermedades</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <p>Aplicación de vacunas esenciales y seguimiento del esquema de vacunación para proteger a tu mascota.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
             <div class="servicioCard animar">
                 <img src="{% static 'img/consultaGeneral.jpg' %}" alt="Consulta general" class="cardImg">
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $350</span>
+                    <span class="cardPrecio">Desde $250</span>
                     <h3>Consulta general</h3>
-                    <p>Revisión completa para evaluar la salud de la mascota y detectar posibles enfermedades.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <p>Revisión completa del estado de salud de tu mascota con diagnóstico preciso y orientación personalizada.</p>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
@@ -110,11 +111,89 @@
                     <span class="cardPrecio">Desde $80</span>
                     <h3>Corte de uñas</h3>
                     <p>Servicio rápido y seguro para mantener las uñas de tu mascota en la longitud adecuada y sin riesgos.</p>
-                    <a href="{% url 'agendar' %}" class="botonCita">Agenda tu cita</a>
+                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
 
         </div>
+
+        <!-- PRODUCTOS -->
+        <div class="produSeccion">
+
+            <div class="productosInicio animar">
+                <h2>Nuestros Productos</h2>
+                <p>Todo lo que tu mascota necesita para estar sana, feliz y con estilo.</p>
+            </div>
+
+            <div class="productosGrid">
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/alimento cardiaco.png' %}" alt="Alimento cardiaco" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$350</span>
+                        <h3>Alimento cardiaco</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/antipulgas.png' %}" alt="Antipulgas" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$180</span>
+                        <h3>Antipulgas</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/collar.png' %}" alt="Collar" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$120</span>
+                        <h3>Collar</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/croquetasNupec.png' %}" alt="Croquetas Nupec" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$280</span>
+                        <h3>Croquetas Nupec</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/desparasitante.png' %}" alt="Desparasitante" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$150</span>
+                        <h3>Desparasitante</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/juguete.png' %}" alt="Juguete" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$90</span>
+                        <h3>Juguete</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/shampoo.png' %}" alt="Shampoo" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$110</span>
+                        <h3>Shampoo</h3>
+                    </div>
+                </div>
+
+                <div class="productoCard animar">
+                    <img src="{% static 'img/vitaminas.png' %}" alt="Vitaminas" class="productoImg">
+                    <div class="productoInfo">
+                        <span class="productoPrecio">$200</span>
+                        <h3>Vitaminas</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
     </main>
 
     <aside></aside>
