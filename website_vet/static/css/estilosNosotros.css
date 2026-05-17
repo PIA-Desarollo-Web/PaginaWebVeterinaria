@@ -1,0 +1,341 @@
+/* ── GENERAL ── */
+main {
+    width: 100%;
+    background-color: #f0edfa;
+}
+
+/* ── 1. HERO ── */
+.nosotros {
+    text-align: center;
+    padding: 80px 200px;
+    
+}
+
+.nosotros h1 {
+    font-size: 48px;
+    color: #4f1f64;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.nosotros p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.8;
+    max-width: 750px;
+    margin: 0 auto;
+    text-align: justify;
+    max-width: 1000px;
+    width: 100%;       /* ← agrega esto */
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* ── 2. MISIÓN Y VISIÓN ── */
+.misionVision {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 60px 100px;
+    background-color: white;
+}
+
+.mvCard {
+    background-color: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(79, 31, 100, 0.08);
+    transition: 0.3s;
+}
+
+.mvCard.animar.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.15);
+}
+
+.mvIcono {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.mvCard h2 {
+    font-size: 26px;
+    color: #4f1f64;
+    margin-bottom: 16px;
+}
+
+.mvCard p {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* ── 3. EQUIPO ── */
+.equipoSeccion {
+    padding: 20px 100px 60px;
+}
+
+.equipoHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.equipoHeader h2 {
+    font-size: 42px;
+    color: #4f1f64;
+    margin: 12px;
+}
+
+.equipoHeader p {
+    font-size: 20px;
+    color: #777;
+}
+
+.equipoGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.equipoCard {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(79, 31, 100, 0.08);
+    display: flex;
+    flex-direction: row;
+    transition: 0.3s;
+}
+
+.equipoCard.animar.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.15);
+}
+
+.equipoImgCont {
+    width: 200px;
+    flex-shrink: 0;
+}
+
+.equipoImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.equipoInfo {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+}
+
+.equipoInfo h3 {
+    font-size: 22px;
+    color: #4f1f64;
+    font-weight: bold;
+}
+
+.equipoEsp {
+    font-size: 14px;
+    color: #875f99;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.equipoInfo p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* ── 4. HISTORIA ── */
+.historiaSeccion {
+    padding: 20px 100px 60px;
+    background-color: white;
+}
+
+.historiaHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.historiaHeader h2 {
+    font-size: 42px;
+    color: #4f1f64;
+    margin-bottom: 20px;
+}
+
+.historiaHeader p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 1000px;
+    width: 100%;       /* ← agrega esto */
+    margin: 0 auto;
+}
+
+.conoceHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.conoceHeader h2 {
+    font-size: 36px;
+    color: #4f1f64;
+}
+
+.historiaGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.historiaCard {
+    background-color: #f0edfa;
+    border-radius: 20px;
+    padding: 30px 24px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.historiaCard.animar.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.12);
+}
+
+.historiaAno {
+    font-size: 28px;
+    font-weight: bold;
+    color: #875f99;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.historiaCard h3 {
+    font-size: 18px;
+    color: #4f1f64;
+    margin-bottom: 10px;
+}
+
+.historiaCard p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ── 5. ESTADÍSTICAS ── */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: #4f1f64;
+    padding: 60px 100px;
+    gap: 20px;
+    
+}
+
+.estadisticasItem {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* ← centra horizontalmente */
+    gap: 10px;
+}
+
+.estadisticasNum {
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.estadisticasLabel {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+}
+
+.statIcono {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+/* ── 6. VALORES ── */
+.valoresSeccion {
+    padding: 60px 100px;
+    background-color: white;
+}
+
+.valoresHeader {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.valoresHeader h2 {
+    font-size: 42px;
+    color: #4f1f64;
+    margin-bottom: 12px;
+}
+
+.valoresHeader p {
+    font-size: 17px;
+    color: #777;
+}
+
+.valoresGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px;
+}
+
+.valorCard {
+    background-color: white;
+    border-radius: 20px;
+    padding: 36px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(79, 31, 100, 0.08);
+    transition: 0.3s;
+}
+
+.valorCard.animar.visible:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(79, 31, 100, 0.15);
+}
+
+.valorIcono {
+    font-size: 44px;
+    margin-bottom: 18px;
+}
+
+.valorCard h3 {
+    font-size: 20px;
+    color: #4f1f64;
+    margin-bottom: 12px;
+}
+
+.valorCard p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ── ANIMACIÓN ── */
+.animar {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animar.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+p {
+    font-weight: bold;
+}
