@@ -1,11 +1,11 @@
-/* ── MAIN ── */
+/* MAIN  */
 main {
     width: 100%;
     background-color: #f0edfa;
     padding: 40px 100px 80px 100px;
 }
 
-/* ── HEADER SERVICIOS ── */
+/*  HEADER SERVICIOS  */
 .serviciosInicio {
     text-align: center;
     margin-bottom: 30px;
