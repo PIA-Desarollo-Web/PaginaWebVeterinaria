@@ -1,10 +1,10 @@
-/* ── GENERAL ── */
+
 main {
     width: 100%;
     background-color: #f0edfa;
 }
 
-/* ── 1. HERO ── */
+
 .nosotros {
     text-align: center;
     padding: 80px 200px;
@@ -26,12 +26,12 @@ main {
     margin: 0 auto;
     text-align: justify;
     max-width: 1000px;
-    width: 100%;       /* ← agrega esto */
+    width: 100%;       
     margin: 0 auto;
     font-weight: bold;
 }
 
-/* ── 2. MISIÓN Y VISIÓN ── */
+
 .misionVision {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -71,7 +71,7 @@ main {
     line-height: 1.8;
 }
 
-/* ── 3. EQUIPO ── */
+
 .equipoSeccion {
     padding: 20px 100px 60px;
 }
@@ -154,7 +154,7 @@ main {
 }
 
 
-/* ── 4. HISTORIA ── */
+
 .historiaSeccion {
     padding: 20px 100px 60px;
     background-color: white;
@@ -177,7 +177,7 @@ main {
     line-height: 1.8;
     text-align: justify;
     max-width: 1000px;
-    width: 100%;       /* ← agrega esto */
+    width: 100%;       
     margin: 0 auto;
 }
 
@@ -265,7 +265,7 @@ main {
     margin-bottom: 10px;
 }
 
-/* ── 6. VALORES ── */
+
 .valoresSeccion {
     padding: 60px 100px;
     background-color: white;
