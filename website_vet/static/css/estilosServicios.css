@@ -1,11 +1,11 @@
-/* MAIN  */
+
 main {
     width: 100%;
     background-color: #f0edfa;
     padding: 40px 100px 80px 100px;
 }
 
-/*  HEADER SERVICIOS  */
+
 .serviciosInicio {
     text-align: center;
     margin-bottom: 30px;
@@ -26,7 +26,7 @@ main {
     line-height: 1.7;
 }
 
-/* ── GRID SERVICIOS: 4x2 ── */
+
 .serviciosGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -99,7 +99,7 @@ main {
     letter-spacing: 1px;
 }
 
-/* ── SECCIÓN PRODUCTOS ── */
+
 .produSeccion {
     background-color: white;
     border-radius: 30px;
@@ -127,7 +127,7 @@ main {
     font-weight: bold;
 }
 
-/* ── GRID PRODUCTOS: 4x2 ── */
+
 .productosGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -179,7 +179,6 @@ main {
     font-weight: bold;
 }
 
-/* ── ANIMACIÓN ── */
 .animar {
     opacity: 0;
     transform: translateY(40px);
