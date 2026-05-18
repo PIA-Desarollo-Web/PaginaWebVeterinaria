@@ -34,7 +34,7 @@ main {
     margin-bottom: 100px;
 }
 
-/* ── TARJETA SERVICIO ── */
+
 .servicioCard {
     background-color: white;
     border-radius: 20px;
@@ -134,7 +134,7 @@ main {
     gap: 28px;
 }
 
-/* ── TARJETA PRODUCTO ── */
+
 .productoCard {
     background-color: #f0edfa;
     border-radius: 20px;

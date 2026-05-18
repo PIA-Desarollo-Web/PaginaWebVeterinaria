@@ -230,7 +230,7 @@ main {
     line-height: 1.7;
 }
 
-/* ── 5. ESTADÍSTICAS ── */
+
 .estadisticas {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
