@@ -5,7 +5,6 @@ main {
     padding: 40px 100px 80px 100px;
 }
 
-
 .serviciosInicio {
     text-align: center;
     margin-bottom: 30px;
@@ -26,14 +25,12 @@ main {
     line-height: 1.7;
 }
 
-
 .serviciosGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 28px;
     margin-bottom: 100px;
 }
-
 
 .servicioCard {
     background-color: white;
@@ -127,13 +124,11 @@ main {
     font-weight: bold;
 }
 
-
 .productosGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 28px;
 }
-
 
 .productoCard {
     background-color: #f0edfa;
