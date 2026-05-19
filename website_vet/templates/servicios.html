@@ -33,87 +33,23 @@
         </div>
 
         <div class="serviciosGrid">
-
+            {% for servicio in servicios %}
             <div class="servicioCard animar">
-                <img src="{% static 'img/limpiezaDental.jpg' %}" alt="Limpieza dental" class="cardImg">
+                {% if servicio.imagen %}
+                    <img src="{{ servicio.imagen.url }}" alt="{{ servicio.nombre }}" class="cardImg">
+                {% else %}
+                    <img src="{% static 'img/default.jpg' %}" alt="{{ servicio.nombre }}" class="cardImg">
+                {% endif %}
                 <div class="cardInfo">
-                    <span class="cardPrecio">Desde $350</span>
-                    <h3>Limpieza dental</h3>
-                    <p>Eliminamos el sarro y la placa bacteriana para mantener la salud bucal de tu mascota en óptimas condiciones.</p>
+                    <span class="cardPrecio">Desde ${{ servicio.precio }}</span>
+                    <h3>{{ servicio.nombre }}</h3>
+                    <p>{{ servicio.descripcion }}</p>
                     <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
                 </div>
             </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/bañoyCorte.jpg' %}" alt="Baño y corte" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $200</span>
-                    <h3>Baño y corte</h3>
-                    <p>Servicio de estética completo con baño, secado, corte de pelo y uñas para que tu mascota luzca increíble.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/consultaOrto.jpg' %}" alt="Consulta ortopédica" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $500</span>
-                    <h3>Consulta ortopédica</h3>
-                    <p>Diagnóstico y tratamiento de problemas óseos y articulares para mejorar la movilidad de tu mascota.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/consultaCardio.jpg' %}" alt="Consulta cardiológica" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $600</span>
-                    <h3>Consulta cardiológica</h3>
-                    <p>Evaluación del sistema cardiovascular con equipos especializados para detectar enfermedades del corazón.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/desparacitacion.jpg' %}" alt="Desparasitación" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $150</span>
-                    <h3>Desparasitación</h3>
-                    <p>Tratamiento preventivo contra parásitos internos y externos para mantener a tu mascota sana y protegida.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/vacunacion.jpg' %}" alt="Vacunación" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $180</span>
-                    <h3>Vacunación</h3>
-                    <p>Aplicación de vacunas esenciales y seguimiento del esquema de vacunación para proteger a tu mascota.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/consultaGeneral.jpg' %}" alt="Consulta general" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $250</span>
-                    <h3>Consulta general</h3>
-                    <p>Revisión completa del estado de salud de tu mascota con diagnóstico preciso y orientación personalizada.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
-            <div class="servicioCard animar">
-                <img src="{% static 'img/corteUñas.jpg' %}" alt="Corte de uñas" class="cardImg">
-                <div class="cardInfo">
-                    <span class="cardPrecio">Desde $80</span>
-                    <h3>Corte de uñas</h3>
-                    <p>Servicio rápido y seguro para mantener las uñas de tu mascota en la longitud adecuada y sin riesgos.</p>
-                    <a href="{% url 'agendar' %}" class="cardLink">Agendar →</a>
-                </div>
-            </div>
-
+            {% empty %}
+            <p style="color:#777; text-align:center;">No hay servicios disponibles por el momento.</p>
+            {% endfor %}
         </div>
 
         <div class="produSeccion">
@@ -124,72 +60,23 @@
             </div>
 
             <div class="productosGrid">
-
+                {% for producto in productos %}
                 <div class="productoCard animar">
-                    <img src="{% static 'img/alimento cardiaco.png' %}" alt="Alimento cardiaco" class="productoImg">
+                    {% if producto.imagen %}
+                        <img src="{{ producto.imagen.url }}" alt="{{ producto.nombre }}" class="productoImg">
+                    {% else %}
+                        <img src="{% static 'img/default.jpg' %}" alt="{{ producto.nombre }}" class="productoImg">
+                    {% endif %}
                     <div class="productoInfo">
-                        <span class="productoPrecio">$350</span>
-                        <h3>Alimento cardiaco</h3>
+                        <span class="productoPrecio">${{ producto.precio }}</span>
+                        <h3>{{ producto.nombre }}</h3>
                     </div>
                 </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/antipulgas.png' %}" alt="Antipulgas" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$180</span>
-                        <h3>Antipulgas</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/collar.png' %}" alt="Collar" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$120</span>
-                        <h3>Collar</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/croquetasNupec.png' %}" alt="Croquetas Nupec" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$280</span>
-                        <h3>Croquetas Nupec</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/desparasitante.png' %}" alt="Desparasitante" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$150</span>
-                        <h3>Desparasitante</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/juguete.png' %}" alt="Juguete" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$90</span>
-                        <h3>Juguete</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/shampoo.png' %}" alt="Shampoo" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$110</span>
-                        <h3>Shampoo</h3>
-                    </div>
-                </div>
-
-                <div class="productoCard animar">
-                    <img src="{% static 'img/vitaminas.png' %}" alt="Vitaminas" class="productoImg">
-                    <div class="productoInfo">
-                        <span class="productoPrecio">$200</span>
-                        <h3>Vitaminas</h3>
-                    </div>
-                </div>
-
+                {% empty %}
+                <p style="color:#777; text-align:center;">No hay productos disponibles por el momento.</p>
+                {% endfor %}
             </div>
+
         </div>
 
     </main>
