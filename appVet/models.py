@@ -3,8 +3,10 @@ from django.db import models
 # Create your models here.
 class Doctor(models.Model):
     nombre = models.CharField(max_length=50)
-    especialidad = models.CharField(max_length=20)
+    especialidad = models.CharField(max_length=100)
     telefono = models.CharField(max_length=10)
+    descripcion = models.TextField(blank=True, null=True)
+    imagen = models.ImageField(upload_to='doctores/', blank=True, null=True)
     def __str__(self):
         return self.nombre
 

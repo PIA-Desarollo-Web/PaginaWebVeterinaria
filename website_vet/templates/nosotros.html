@@ -53,69 +53,66 @@
                 <p>Profesionales apasionados por la salud y bienestar de tu mascota.</p>
             </div>
             <div class="equipoGrid">
+                {% for doctor in doctores %}
                 <div class="equipoCard animar">
                     <div class="equipoImgCont">
-                        <img src="{% static 'img/nina.png' %}" alt="Dra. Nina" class="equipoImg">
+                        {% if doctor.imagen %}
+                            <img src="{{ doctor.imagen.url }}" alt="{{ doctor.nombre }}" class="equipoImg">
+                        {% else %}
+                            <img src="{% static 'img/default.jpg' %}" alt="{{ doctor.nombre }}" class="equipoImg">
+                        {% endif %}
                     </div>
                     <div class="equipoInfo">
-                        <h3>Dra. Nina</h3>
-                        <span class="equipoEsp">Especialista en Ortopedia</span>
-                        <p>Con más de 5 años de experiencia en ortopedia veterinaria, la Dra. Nina ha ayudado a cientos de mascotas a recuperar su movilidad y calidad de vida.</p>
+                        <h3>{{ doctor.nombre }}</h3>
+                        <span class="equipoEsp">{{ doctor.especialidad }}</span>
+                        <p>{{ doctor.descripcion }}</p>
                     </div>
                 </div>
-                <div class="equipoCard animar">
-                    <div class="equipoImgCont">
-                        <img src="{% static 'img/tobias.jpg' %}" alt="Dr. Tobias" class="equipoImg">
-                    </div>
-                    <div class="equipoInfo">
-                        <h3>Dr. Tobias</h3>
-                        <span class="equipoEsp">Especialista en Cardiología</span>
-                        <p>El Dr. Tobias es experto en cardiología veterinaria con 6 años de trayectoria. Su dedicación y precisión diagnóstica lo hacen uno de los mejores en su campo.</p>
-                    </div>
+                {% empty %}
+                <p style="color:#777;">No hay doctores registrados por el momento.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div class="historiaSeccion">
+            <div class="historiaHeader animar">
+                <h2>Sobre Nosotros</h2>
+                <p>Somos una clínica veterinaria fundada en 2021 por dos apasionados de la medicina animal. Nació de un sueño compartido: ofrecer atención de calidad, cálida y accesible para todas las mascotas de Monterrey. Desde nuestros inicios hemos crecido junto a nuestra comunidad, aprendiendo, mejorando y siempre poniendo el bienestar animal primero. Hoy contamos con dos sucursales, equipo de diagnóstico moderno y un equipo humano comprometido con cada paciente.</p>
+                <p></p>
+            </div>
+
+            <div class="conoceHeader animar">
+                <h2>Conoce Nuestra Historia</h2>
+            </div>
+
+            <div class="historiaGrid">
+                <div class="historiaCard animar">
+                    <span class="historiaAno">2021</span>
+                    <h3>El comienzo</h3>
+                    <p>La Dra. Nina y el Dr. Tobias abrieron la primera sucursal en Monterrey con el sueño de brindar atención veterinaria de calidad a precios accesibles.</p>
+                </div>
+                <div class="historiaCard animar">
+                    <span class="historiaAno">2023</span>
+                    <h3>Crecimiento</h3>
+                    <p>Abrimos nuestra segunda sucursal en San Fernando, ampliando servicios de estética, laboratorio y consultas especializadas.</p>
+                </div>
+                <div class="historiaCard animar">
+                    <span class="historiaAno">2024</span>
+                    <h3>Reconocimiento</h3>
+                    <p>Fuimos reconocidos como una de las mejores clínicas veterinarias de Monterrey por nuestra comunidad y pacientes.</p>
+                </div>
+                <div class="historiaCard animar">
+                    <span class="historiaAno">2025</span>
+                    <h3>Innovación</h3>
+                    <p>Incorporamos nuevos equipos de diagnóstico y ampliamos nuestro equipo de especialistas para seguir creciendo.</p>
                 </div>
             </div>
         </div>
 
-<div class="historiaSeccion">
-    <div class="historiaHeader animar">
-        <h2>Sobre Nosotros</h2>
-        <p>Somos una clínica veterinaria fundada en 2021 por dos apasionados de la medicina animal. Nació de un sueño compartido: ofrecer atención de calidad, cálida y accesible para todas las mascotas de Monterrey. Desde nuestros inicios hemos crecido junto a nuestra comunidad, aprendiendo, mejorando y siempre poniendo el bienestar animal primero. Hoy contamos con dos sucursales, equipo de diagnóstico moderno y un equipo humano comprometido con cada paciente.</p>
-        <p></p>
-    </div>
-
-    <div class="conoceHeader animar">
-        <h2>Conoce Nuestra Historia</h2>
-    </div>
-
-    <div class="historiaGrid">
-        <div class="historiaCard animar">
-            <span class="historiaAno">2021</span>
-            <h3>El comienzo</h3>
-            <p>La Dra. Nina y el Dr. Tobias abrieron la primera sucursal en Monterrey con el sueño de brindar atención veterinaria de calidad a precios accesibles.</p>
-        </div>
-        <div class="historiaCard animar">
-            <span class="historiaAno">2023</span>
-            <h3>Crecimiento</h3>
-            <p>Abrimos nuestra segunda sucursal en San Fernando, ampliando servicios de estética, laboratorio y consultas especializadas.</p>
-        </div>
-        <div class="historiaCard animar">
-            <span class="historiaAno">2025</span>
-            <h3>Innovación</h3>
-            <p>Incorporamos equipos de diagnóstico de última generación y lanzamos nuestro sistema de citas en línea.</p>
-        </div>
-        <div class="historiaCard animar">
-            <span class="historiaAno">Hoy</span>
-            <h3>Seguimos creciendo</h3>
-            <p>Con más de 1,000 mascotas atendidas seguimos comprometidos con nuestra misión de cuidar lo que más amas.</p>
-        </div>
-    </div>
-</div>
-
-        <div class="estadisticas animar">
-            <div class="estadisticasItem">
-                 <svg fill="white" version="1.1" viewBox="0 0 390.126 390.125" class="statIcono" xmlns="http://www.w3.org/2000/svg">
+        <div class="estadisticas">
+            <div class="estadisticasItem animar">
+                <svg fill="#ffffff" viewBox="0 0 390.534 390.534" class="statIcono" xmlns="http://www.w3.org/2000/svg">
                     <g><g>
-                        <path d="M132.64,177.859c31.162,0,56.508-34.014,56.508-75.834c0-41.817-25.347-75.841-56.508-75.841 c-31.153,0-56.502,34.023-56.502,75.841C76.138,143.845,101.487,177.859,132.64,177.859z"></path>
                         <path d="M300.246,251.628c-1.159-1.579-2.27-3.068-2.864-4.348c-12.635-27.046-47.27-58.931-103.382-59.724l-2.159-0.012 c-55.25,0-89.627,30.197-103.381,58.469c-0.475,0.967-1.52,2.222-2.627,3.549c-1.31,1.555-2.606,3.146-3.714,4.875 c-11.619,18.075-17.543,38.426-16.669,57.299c0.916,20.037,9.305,36.131,23.581,45.312c5.768,3.705,11.992,5.572,18.522,5.572 c13.465,0,25.793-7.584,40.079-16.368c9.083-5.598,18.465-11.374,28.886-15.697c1.168-0.385,5.954-0.973,13.781-0.973 c9.307,0,15.991,0.828,17.419,1.321c10.173,4.491,19.107,10.382,27.748,16.068c13.247,8.731,25.755,16.97,39.326,16.97 c5.824,0,11.469-1.537,16.795-4.563c29.382-16.693,34.979-62.492,12.484-102.088C302.942,255.303,301.597,253.448,300.246,251.628z"></path>
                         <path d="M252.796,177.859c31.147,0,56.499-34.014,56.499-75.834c0-41.817-25.352-75.841-56.499-75.841 c-31.165,0-56.511,34.023-56.511,75.841C196.285,143.845,221.631,177.859,252.796,177.859z"></path>
                         <path d="M345.595,138.918c-24.975,0-44.521,25.901-44.521,58.967c0,33.051,19.558,58.955,44.521,58.955 c24.961,0,44.531-25.904,44.531-58.955C390.126,164.82,370.568,138.918,345.595,138.918z"></path>
@@ -125,25 +122,25 @@
                 <span class="estadisticasNum">+1,000</span>
                 <span class="estadisticasLabel">Mascotas atendidas</span>
             </div>
-            <div class="estadisticasItem">
+            <div class="estadisticasItem animar">
                 <svg fill="#ffffff" version="1.1" viewBox="0 0 512.001 512.001" class="statIcono" xmlns="http://www.w3.org/2000/svg">
                     <g><g>
-                        <path d="M511.971,494.906l-8.728-100.452c-2.986-34.378-27.095-63.239-59.99-71.818l-99.982-26.073 c-2.634-0.686-5.439,0.043-7.403,1.929l-2.45,2.351l-25.459-11.573l-2.377-14.535c9.64-6.145,18.499-14.321,25.893-23.667 c27.518-5.502,47.869-30.014,47.869-58.4V91.115c0-45.509-37.024-82.533-82.534-82.533h-81.622 c-27.43,0-52.997,13.578-68.393,36.322c-2.426,3.584-1.487,8.456,2.097,10.882c3.585,2.426,8.456,1.487,10.882-2.097 c12.475-18.431,33.191-29.434,55.413-29.434h81.622c36.868,0,66.861,29.993,66.861,66.86v40.956 c-3.013-1.767-6.508-2.797-10.246-2.797h-0.271v-4.106c0-2.449-1.145-4.757-3.095-6.239c-1.95-1.482-4.478-1.968-6.84-1.311 c-6.347,1.764-12.824,3.216-19.403,4.371c-12.295,2.157-24.955,3.253-37.837,3.253c-28.51,0-56.237-5.524-80.184-15.643 c-2.235-0.945-4.437-1.93-6.604-2.954c-0.149-0.07-0.3-0.139-0.448-0.21c-9.921-4.723-19.094-10.27-27.283-16.572 c-2.367-1.822-5.562-2.139-8.241-0.821c-2.679,1.319-4.376,4.046-4.376,7.031v33.201h-0.271c-3.739,0-7.233,1.031-10.246,2.797 V91.115c0-4.814,0.513-9.617,1.526-14.275c0.918-4.229-1.764-8.403-5.993-9.322c-4.228-0.919-8.403,1.765-9.322,5.993 c-1.25,5.75-1.883,11.672-1.883,17.603v101.553c0,28.296,20.278,52.797,47.699,58.367c7.422,9.433,16.335,17.686,26.035,23.878 l-2.348,14.356l-25.459,11.573l-2.45-2.351c-1.964-1.885-4.768-2.615-7.403-1.929l-99.982,26.073 c-32.895,8.578-57.003,37.44-59.99,71.818L0.029,494.903c-0.19,2.188,0.547,4.355,2.031,5.975c1.484,1.619,3.58,2.54,5.776,2.54 H95.85c0.004,0,0.007,0.001,0.011,0.001c0.003,0,0.007-0.001,0.01-0.001h320.256c0.004,0,0.007,0.001,0.01,0.001 c0.004,0,0.007-0.001,0.011-0.001h88.014c2.196,0,4.291-0.922,5.776-2.54C511.424,499.261,512.162,497.092,511.971,494.906z M214.341,301.803c2.383-1.083,4.068-3.286,4.491-5.869l2.215-13.543c0.122,0.047,0.243,0.089,0.366,0.135l2.618,0.886l0.648,0.196 c1.011,0.307,2.021,0.597,3.027,0.849c10.84,2.729,18.669,4.309,26.608,4.309c7.877,0,15.615-1.538,26.322-4.196l0.975-0.242 c1.003-0.249,2.009-0.534,3.018-0.837l0.715-0.215c0.869-0.272,1.741-0.563,2.612-0.875l1.323-0.489l0.434-0.16l2.245,13.733 c0.423,2.584,2.108,4.786,4.491,5.869l23.585,10.721l-65.245,62.609l-65.245-62.609L214.341,301.803z"></path>
+                        <path d="M511.971,494.906l-8.728-100.452c-2.986-34.378-27.095-63.239-59.99-71.818l-99.982-26.073 c-2.634-0.686-5.439,0.043-7.403,1.929l-2.45,2.351l-25.459-11.573l-2.377-14.535c9.64-6.145,18.499-14.321,25.893-23.667 c27.518-5.502,47.869-30.014,47.869-58.4V91.115c0-45.509-37.024-82.533-82.534-82.533h-81.622 c-27.43,0-52.997,13.578-68.393,36.322c-2.426,3.584-1.487,8.456,2.097,10.882c3.585,2.426,8.456,1.487,10.882-2.097 c12.475-18.431,33.191-29.434,55.413-29.434h81.622c36.868,0,66.861,29.993,66.861,66.86v40.956 c-3.013-1.767-6.508-2.797-10.246-2.797h-0.271v-4.106c0-2.449-1.145-4.757-3.095-6.239c-1.95-1.482-4.478-1.968-6.84-1.311 c-6.347,1.764-12.824,3.216-19.403,4.371c-12.295,2.157-24.955,3.253-37.837,3.253c-28.51,0-56.237-5.524-80.184-15.643 c-2.235-0.945-4.437-1.93-6.604-2.954c-0.149-0.07-0.3-0.139-0.448-0.21c-9.921-4.723-19.094-10.27-27.283-16.572 c-2.367-1.822-5.562-2.139-8.241-0.821c-2.679,1.319-4.376,4.046-4.376,7.031v33.201h-0.271c-3.739,0-7.233,1.031-10.246,2.797 V91.115c0-4.814,0.513-9.617,1.526-14.275c0.918-4.229-1.764-8.403-5.993-9.322c-4.228-0.919-8.403,1.765-9.322,5.993 c-1.25,5.75-1.883,11.672-1.883,17.603v101.553c0,28.296,20.278,52.797,47.699,58.367c7.422,9.433,16.335,17.686,26.035,23.878 l-2.348,14.356l-25.459,11.573l-2.45-2.351c-1.964-1.885-4.768-2.615-7.403-1.929l-99.982,26.073 c-32.895,8.578-57.003,37.44-59.99,71.818L0.029,494.903c-0.19,2.188,0.547,4.355,2.031,5.975c1.484,1.619,3.58,2.54,5.776,2.54 H95.85c0.004,0,0.007,0.001,0.011,0.001c0.003,0,0.007-0.001,0.01-0.001h320.256c0.004,0,0.007,0.001,0.01,0.001 c0.004,0,0.007-0.001,0.011-0.001h88.014c2.196,0,4.291-0.922,5.776-2.54C511.424,499.261,512.162,497.092,511.971,494.906z"></path>
                     </g></g>
                 </svg>
                 <span class="estadisticasNum">2</span>
                 <span class="estadisticasLabel">Especialistas</span>
             </div>
-            <div class="estadisticasItem">
-                 <svg viewBox="0 0 24 24" fill="none" class="statIcono" xmlns="http://www.w3.org/2000/svg">
+            <div class="estadisticasItem animar">
+                <svg viewBox="0 0 24 24" fill="none" class="statIcono" xmlns="http://www.w3.org/2000/svg">
                     <path d="M11.2691 4.41115C11.5006 3.89177 11.6164 3.63208 11.7776 3.55211C11.9176 3.48263 12.082 3.48263 12.222 3.55211C12.3832 3.63208 12.499 3.89177 12.7305 4.41115L14.5745 8.54808C14.643 8.70162 14.6772 8.77839 14.7302 8.83718C14.777 8.8892 14.8343 8.93081 14.8982 8.95929C14.9705 8.99149 15.0541 9.00031 15.2213 9.01795L19.7256 9.49336C20.2911 9.55304 20.5738 9.58288 20.6997 9.71147C20.809 9.82316 20.8598 9.97956 20.837 10.1342C20.8108 10.3122 20.5996 10.5025 20.1772 10.8832L16.8125 13.9154C16.6877 14.0279 16.6252 14.0842 16.5857 14.1527C16.5507 14.2134 16.5288 14.2807 16.5215 14.3503C16.5132 14.429 16.5306 14.5112 16.5655 14.6757L17.5053 19.1064C17.6233 19.6627 17.6823 19.9408 17.5989 20.1002C17.5264 20.2388 17.3934 20.3354 17.2393 20.3615C17.0619 20.3915 16.8156 20.2495 16.323 19.9654L12.3995 17.7024C12.2539 17.6184 12.1811 17.5765 12.1037 17.56C12.0352 17.5455 11.9644 17.5455 11.8959 17.56C11.8185 17.5765 11.7457 17.6184 11.6001 17.7024L7.67662 19.9654C7.18404 20.2495 6.93775 20.3915 6.76034 20.3615C6.60623 20.3354 6.47319 20.2388 6.40075 20.1002C6.31736 19.9408 6.37635 19.6627 6.49434 19.1064L7.4341 14.6757C7.46898 14.5112 7.48642 14.429 7.47814 14.3503C7.47081 14.2807 7.44894 14.2134 7.41394 14.1527C7.37439 14.0842 7.31195 14.0279 7.18708 13.9154L3.82246 10.8832C3.40005 10.5025 3.18884 10.3122 3.16258 10.1342C3.13978 9.97956 3.19059 9.82316 3.29993 9.71147C3.42581 9.58288 3.70856 9.55304 4.27406 9.49336L8.77835 9.01795C8.94553 9.00031 9.02911 8.99149 9.10139 8.95929C9.16534 8.93081 9.2226 8.8892 9.26946 8.83718C9.32241 8.77839 9.35663 8.70162 9.42508 8.54808L11.2691 4.41115Z" stroke="#ffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
-                <span class="estadisticasNum">4.8 </span>
+                <span class="estadisticasNum">4.8</span>
                 <span class="estadisticasLabel">Calificación promedio</span>
             </div>
-            <div class="estadisticasItem">
+            <div class="estadisticasItem animar">
                 <svg fill="#ffffff" viewBox="0 0 1024 1024" class="statIcono" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984zM736 511.888h64c17.664 0 32-14.336 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32zm0 255.984h64c17.664 0 32-14.32 32-32v-64c0-17.664-14.336-32-32-32h-64c-17.664 0-32 14.336-32 32v64c0 17.696 14.336 32 32 32zm-192-128h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32zm0-255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm-256 0h-64c-17.664 0-32 14.336-32 32v64c0 17.664 14.336 32 32 32h64c17.664 0 32-14.336 32-32v-64c0-17.68-14.336-32-32-32zm0 255.984h-64c-17.664 0-32 14.336-32 32v64c0 17.68 14.336 32 32 32h64c17.664 0 32-14.32 32-32v-64c0-17.648-14.336-32-32-32z"></path>
+                    <path d="M960 95.888l-256.224.001V32.113c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76h-256v-63.76c0-17.68-14.32-32-32-32s-32 14.32-32 32v63.76H64c-35.344 0-64 28.656-64 64v800c0 35.343 28.656 64 64 64h896c35.344 0 64-28.657 64-64v-800c0-35.329-28.656-63.985-64-63.985zm0 863.985H64v-800h255.776v32.24c0 17.679 14.32 32 32 32s32-14.321 32-32v-32.224h256v32.24c0 17.68 14.32 32 32 32s32-14.32 32-32v-32.24H960v799.984z"></path>
                 </svg>
                 <span class="estadisticasNum">5 años</span>
                 <span class="estadisticasLabel">De experiencia</span>
